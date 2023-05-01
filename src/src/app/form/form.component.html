@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit()">
+    <label>First Name:</label>
+    <input [(ngModel)]="firstName" name="firstName">
+    <label>Last Name:</label>
+    <input [(ngModel)]="lastName" name="lastName">
+    <label>Email:</label>
+    <input [(ngModel)]="email" name="email" type="email">
+    <label>Password:</label>
+    <input [(ngModel)]="password" name="password" type="password">
+    <label>Confirm Password:</label>
+    <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password">
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <table>
+    
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of formData">
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
