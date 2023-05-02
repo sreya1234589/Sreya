@@ -1,0 +1,13 @@
+nav {
+    background-color: blue;
+}
+
+ul {
+    list-style: none;
+    color: white;
+    display: flex;
+    margin: 0;
+}
+ul > li {
+    padding: 1rem;
+}

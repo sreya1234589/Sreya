@@ -1,0 +1,13 @@
+nav {
+    background-color: grey;
+    max-width: 150px;
+}
+
+ul {
+    list-style: none;
+    color: white;
+    margin: 0;
+}
+ul > li {
+    padding: 1rem;
+}

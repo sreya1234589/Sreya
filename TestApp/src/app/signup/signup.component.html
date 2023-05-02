@@ -1,0 +1,33 @@
+Template Driven Forms
+
+
+<!-- Reactive forms -->
+
+<form #signup="ngForm">
+  <div>
+    <label>FirstNAme</label>
+    <input type="text" name="firstName" [(ngModel)]="firstName"
+    required  />
+  </div>
+  <div>
+    <label>LastName</label>
+    <input type="text" name="lastName" [(ngModel)]="lastName"
+    required />
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="email" name="email" [(ngModel)]="email" />
+  </div>
+  <div>
+    <label>password</label>
+    <input type="password" name="password" [(ngModel)]="password" />
+  </div>
+  
+  <button (click)="submitForm()" type="submit" [disabled]="signup.invalid">Submit</button>
+</form>
+<button (click)="hideData()"> Hide</button>
+id Form Valid: {{signup.valid}}
+
+<div>
+  {{signup.value | json}}
+</div>
